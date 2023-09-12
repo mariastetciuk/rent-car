@@ -1,9 +1,10 @@
 import CarsList from 'components/CarsList/CarsList';
+import Fillter from 'components/Fillter/Filter';
 
 const CatalogPage = () => {
   return (
     <section>
-      <h2>CatalogPage</h2>
+      <Fillter/>
       <CarsList />
     </section>
   );
