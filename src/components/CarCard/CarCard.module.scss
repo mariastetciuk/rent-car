@@ -26,6 +26,7 @@
  &__wrapper {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 8px;
     color: #121417;
 font-family: Manrope;
 font-size: 16px;
@@ -52,8 +53,9 @@ line-height:calc(24 / 16);
 
  &__list {
     display: flex;
-    gap: 4px;
+    gap: 3px;
     flex-wrap: wrap;
+    
  }
  
  &__item{
@@ -66,11 +68,29 @@ line-height: 18px;
  }
  &__item:not(:first-child) {
     border-left: 1px solid rgba(18, 20, 23, 0.10);
-    padding: 0 4px 0 4px;
+    padding: 0 3px 0 2px;
  }
 
  &__item:nth-child(5) {
     border-left: none;
     padding-left: 0;
+ }
+
+ &__learnMore {
+    width: 274px;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 99px;
+    border: none;
+    border-radius: 12px;
+background-color: #3470FF;
+align-items: center;
+color: #FFF;
+font-family: Manrope;
+font-size: 14px;
+
+font-weight: 600;
+line-height: calc(20 / 14); 
+
  }
 }

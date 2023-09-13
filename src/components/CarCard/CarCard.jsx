@@ -19,8 +19,8 @@ const CarCard = ({cardCar: {img, make, model, year, rentalPrice, rentalCompany, 
 <li className={scss.card__item}>{model}</li>
 <li className={scss.card__item}>{id}</li>
 <li className={scss.card__item}>{accessories[0]}</li>
-
   </ul>
+  <button className={scss.card__learnMore} type='button'>Learn more</button>
   </>;
 };
 
