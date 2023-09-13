@@ -1,12 +1,12 @@
-import CarsList from 'components/CarsList/CarsList';
-import Fillter from 'components/Fillter/Filter';
+import Catalog from "components/Catalog/Catalog";
+
+
+
 
 const CatalogPage = () => {
+ 
   return (
-    <section>
-      <Fillter/>
-      <CarsList />
-    </section>
+      <Catalog />
   );
 };
 
