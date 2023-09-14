@@ -35,7 +35,7 @@ font-weight: 500;
 line-height:calc(24 / 16); 
  }
 
- &__span {
+ &__model {
     color: #3470FF;
     margin-left: 3px;
  }
@@ -94,7 +94,7 @@ font-size: 14px;
 
 font-weight: 600;
 line-height: calc(20 / 14); 
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 &:hover,
 &:focus {

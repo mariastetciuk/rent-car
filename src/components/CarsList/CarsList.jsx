@@ -18,7 +18,6 @@ const CarsList = () => {
       };
       featch();
      }, [page]);
-   
      const handleBtnLoadMore = (evn) => {
       setPage(prev => prev + 1);
 
@@ -32,7 +31,7 @@ const CarsList = () => {
       }
 
       featch(page);
-      console.log(gallary);
+      
     }
 
   return (
