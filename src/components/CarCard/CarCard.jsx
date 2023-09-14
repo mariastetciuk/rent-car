@@ -3,7 +3,7 @@ import scss from './CarCard.module.scss';
 
 const CarCard = ({cardCar: {img, make, model, year, rentalPrice, rentalCompany, type, id, accessories, address}}) => {
   
-  return <>
+  return <li className={scss.item} >
   <img className={scss.card__img} src={img} alt="Car" />
   <button className={scss.card__btn} type="button"> <CiHeart size={'18'} className={scss.card__icon}/></button>
   <div className={scss.card__wrapper}>
@@ -18,10 +18,10 @@ const CarCard = ({cardCar: {img, make, model, year, rentalPrice, rentalCompany, 
 <li className={scss.card__item}>{type}</li>
 <li className={scss.card__item}>{model}</li>
 <li className={scss.card__item}>{id}</li>
-<li className={scss.card__item}>{accessories[0]}</li>
+<li className={scss.card__item}>{accessories[0].substring(0, 25)}</li>
   </ul>
   <button className={scss.card__learnMore} type='button'>Learn more</button>
-  </>;
+  </li>
 };
 
 export default CarCard;
