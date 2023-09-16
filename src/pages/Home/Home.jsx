@@ -8,8 +8,9 @@ const HomePage = () => {
     <section className={scss.hero}>
       <Container>
       <h1 className={scss.hero__title}>Car Rentals: Search, <span className={scss.hero__titleSpan}>Compare & Save</span> </h1>
-      <Link to="/cataloge" >
-            Other drinks
+      <Link to="/catalog" className={scss.hero__btn}>
+      Choose a car
+
           </Link>
       </Container>
     </section>
