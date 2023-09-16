@@ -46,7 +46,7 @@ const Modal = ({ closeModal, cardCar }) => {
         <li className={scss.characteristick__item}>{`Accessories: ${accessories.join(', ').toLowerCase()}.`}</li>
         <li className={scss.characteristick__item}>{`Engine size ${engineSize}.`}</li>
         <li className={scss.characteristick__item}>{`Fuel consumption ${fuelConsumption}.`}</li>
-        <li className={scss.characteristick__item}>{`Mileage ${mileage}.`}</li>
+        <li className={scss.characteristick__item}>{`Mileage ${mileage.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.`}</li>
        </ul>
        </div>
        </div>
@@ -55,7 +55,9 @@ const Modal = ({ closeModal, cardCar }) => {
        <p className={scss.company__name}>Rental company: <span className={scss.company__description}>{rentalCompany}.</span></p>
        <p className={scss.company__name}>Address: <span className={scss.company__description}>{address}.</span></p>
        </div>
-       <button className={scss.modal__btn} onClick={closeModal}><FiX size="23" color='inherit' /></button>
+       <a className={scss.company__tel} href="tel:+380730000000">Rental car</a>
+      
+       <button className={scss.modal__btn} onClick={closeModal}><FiX size="23"  /></button>
       </div>
     </div>
   );

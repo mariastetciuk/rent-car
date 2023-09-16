@@ -2,21 +2,17 @@ import CarCard from 'components/CarCard/CarCard';
 import { useEffect, useState } from "react";
 import {getGallery} from "API/fetch";
 import scss from "./CarsList.module.scss";
-import { getFavorites } from 'utilities/favoriteGallery';
+
 
 const CarsList = () => {
   const [gallary, setGallary] = useState([]);
-  const [favorite, setFavorite] = useState(getFavorites);
   const [page, setPage] = useState(1);
-  // const[isShowLoadMore, setisShowLoadMore] = useState(true);
-  console.log(setFavorite);
-  console.log(favorite)
+ 
   useEffect(()=>{
     async function featch() {
         try {
           const {data}  = await getGallery(page);
           setGallary(data)
-         
         } catch (error) {
           console.log(error);
         }

@@ -1,16 +1,17 @@
 export function getFavorites() {
-    const favorites = localStorage.getItem("favorite");
-    return favorites ? favorites : [];
+    const favorites = JSON.parse(localStorage.getItem('favorite'));
+    return !favorites ? [] : favorites;
+  }
+
+ export const toggleFavorite = (isFaforite, favorite)=>{
+    const localeStorageData = getFavorites();
+    if(isFaforite && localeStorageData) {
+      const updateFavorite = localeStorageData.filter(({id})=> id !== favorite.id);
+    return updateFavorite;
+    } if(localeStorageData){
+      return [...localeStorageData, favorite];
+    } else {
+      return [favorite]; 
+    }
   }
   
-  export function addFavorite(id) {
-    const favorite = getFavorites();
-    favorite.push(id);
-    localStorage.setItem("favorite", JSON.stringify(favorite));
-  }
-  
-  export function deleteFavorite(id) {
-    const favorite = getFavorites();
-    const updatedFavorite = favorite.filter((favorite) => favorite !== id);
-    localStorage.setItem("favorite", JSON.stringify(updatedFavorite));
-  }
