@@ -3,8 +3,8 @@ import scss from './Modal.module.scss';
 import { FiX } from 'react-icons/fi';
 
 
-const Modal = ({ closeModal, setIsShowModal, cardCar }) => {
-    const {img, make, model, year, rentalPrice, rentalCompany, type, accessories, address, engineSize, fuelConsumption, rentalConditions, mileage, description } = cardCar;
+const Modal = ({ closeModal, cardCar }) => {
+    const {img, make, model, year, rentalPrice, rentalCompany, type, accessories, functionalities, address, engineSize, fuelConsumption, rentalConditions, mileage, description } = cardCar;
   const handleOverlayClick = event => {
     if (event.currentTarget === event.target) {
       closeModal();
@@ -42,6 +42,7 @@ const Modal = ({ closeModal, setIsShowModal, cardCar }) => {
        <h3 className={scss.characteristick__title}>Characteristick</h3>
        <ul className={scss.characteristick__list}>
         <li className={scss.characteristick__item}>{`Type ${type}.`}</li>
+        <li className={scss.characteristick__item}>{`Functionalities: ${functionalities.join(', ').toLowerCase()}.`}</li>
         <li className={scss.characteristick__item}>{`Accessories: ${accessories.join(', ').toLowerCase()}.`}</li>
         <li className={scss.characteristick__item}>{`Engine size ${engineSize}.`}</li>
         <li className={scss.characteristick__item}>{`Fuel consumption ${fuelConsumption}.`}</li>

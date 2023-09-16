@@ -1,7 +1,7 @@
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import CatalogPage from 'pages/Catalog';
 import FavoritesPage from 'pages/Favorites';
-import HomePage from 'pages/Home';
+import HomePage from 'pages/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 
 const App = () => {
