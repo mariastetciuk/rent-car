@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import CarCard from "components/CarCard/CarCard";
+
 import scss from '../components/CarsList/CarsList.module.scss';
 import Container from "components/Shared/Container";
 

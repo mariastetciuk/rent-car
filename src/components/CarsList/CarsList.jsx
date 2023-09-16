@@ -9,18 +9,20 @@ const CarsList = () => {
   const [favorite, setFavorite] = useState(getFavorites);
   const [page, setPage] = useState(1);
   // const[isShowLoadMore, setisShowLoadMore] = useState(true);
+  console.log(setFavorite);
+  console.log(favorite)
   useEffect(()=>{
     async function featch() {
         try {
           const {data}  = await getGallery(page);
           setGallary(data)
-          console.log(favorite)
+         
         } catch (error) {
           console.log(error);
         }
       };
       featch();
-     }, [page]);
+     }, [page, ]);
 
      const handleBtnLoadMore = () => {
       setPage(prev => prev + 1);
