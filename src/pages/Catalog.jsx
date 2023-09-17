@@ -1,9 +1,6 @@
 import Catalog from "components/Catalog/Catalog";
 import Container from "components/Shared/Container";
 
-
-
-
 const CatalogPage = () => {
   return (
     <Container >
@@ -11,5 +8,4 @@ const CatalogPage = () => {
       </Container>
   );
 };
-
 export default CatalogPage;

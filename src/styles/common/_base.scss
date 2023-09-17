@@ -11,12 +11,7 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: calc(18 / 12);
-     
   
-
- 
-
- 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
@@ -27,6 +22,7 @@ body {
   &.is-open {
 
     overflow-y: hidden;
+  
   }
 
 }

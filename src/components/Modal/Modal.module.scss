@@ -14,14 +14,14 @@
   }
   
   .modal {
-    // max-width: calc(100vw - 48px);
-    // max-height: calc(100vh - 24px);
+    max-height: calc(100vh - 20px);
     width: 541px;
     position: relative;
     background-color: white;
     padding: 40px;
     border-radius: 24px;
     background-color: #FFF;
+    overflow-y: auto;
 
     &__btn {
       position: absolute;
