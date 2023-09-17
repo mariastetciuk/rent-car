@@ -11,7 +11,7 @@ const CarCard = ({cardCar}) => {
 
 
   const [isShowModal, setIsShowModal] = useState(false);
-  const [isFaforites, setIsFavorite] = useState(JSON.parse(localStorage.getItem('favorite')).some(item => item.id === id));
+  const [isFaforites, setIsFavorite] = useState(JSON.parse(localStorage.getItem('favorite')).some(item => item.id === id) || false);
   const {togleValueFn} = useContext(ToggleContext);
  
  const handleClickBtn = () => {

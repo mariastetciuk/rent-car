@@ -16,7 +16,7 @@ const Catalog = ()=> {
       async function featch() {
           try {
             const {data}  = await getGallery(1);
-            setGallary(data);
+            setGallary(prev => [ ...data]);
           } catch (error) {
             console.log(error);
           }

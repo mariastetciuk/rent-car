@@ -1,7 +1,8 @@
 import Select from "react-select";
 import scss from './Fillter.module.scss'
 import makes from 'data/makes.json';
-import { useForm, Controller } from "react-hook-form"
+import { useForm, Controller } from "react-hook-form";
+import { getGallerys } from "API/fetch";
 
 
 const optionPrices = [
@@ -19,25 +20,54 @@ const optionPrices = [
 
   const optionBrands = makes.map(make => ({ value: make, label: make }));
 
-const getValue= (value, options) => value?options.find((option)=> option.value === value) : '';
+const getValue= (value, options) => value?options.find((option)=> option.value === value) : 'null';
 
-const Fillter = () => {
-  
+const Fillter = ({handleFillter, gallary}) => {
+ 
+
     const {
         register,
         handleSubmit,
         control,
        
-    } = useForm({mode: 'onChange'});
+    } = useForm({mode: 'onChange', defaultValues: { from: '', to: '' }});
 
-    const onSubmitForm = data => {
-       
-    }
+   
+
+    const onSubmitForm = (data) => {
+        console.log('before', gallary)
+        console.log(data)
+       async function featch() {
+        try {
+                const result = await getGallerys();
+                console.log('result all ', result.data);
+
+                const make = result.data.filter(({ make }) => (make ? data.make === make : data.make)).filter(({ rentalPrice }) => {
+                    if (!data.price) {
+                      return rentalPrice;}
+                    data.price = `$${data.price}`;
+                     return rentalPrice === data.price;
+                   }).filter(({ mileage}) => mileage > data.from).filter(({ mileage }) => (mileage ? data.to < mileage : data.to));
+
+                   handleFillter(make);
+           
+                } catch (error) {
+                    console.log(error);
+                  }
+                  
+          
+              };
+          featch();
+
+    
+}
+
+
     return <section>
         <form onSubmit={handleSubmit(onSubmitForm)} className={scss.form} >
             <Controller 
             control={control}
-            name="car brand"
+            name="make"
             render={({field:{onChange, value}, fieldState: {error}})=>(<label className={scss.select__label} htmlFor="">
             Car brand
             <Select 
@@ -50,7 +80,7 @@ const Fillter = () => {
             />
              <Controller 
             control={control}
-            name="prise"
+            name="price"
             render={({field:{onChange, value}, fieldState: {error}})=>(<label htmlFor="">
             Price/ 1 hour
             <Select 
@@ -64,8 +94,8 @@ const Fillter = () => {
             <label htmlFor="">
             Car mileage / km
             <br />
-            <input {...register('from')} className={scss.input} type="number"  placeholder="From"/>
-            <input {...register('to')} className={scss.input} type="number" placeholder="To" />
+            <input {...register('from')} className={scss.input} name='from' type="number"  placeholder="From"/>
+            <input {...register('to')} className={scss.input} name='to' type="number" placeholder="To" />
             </label>
             <button type="submit">Search</button>
 
