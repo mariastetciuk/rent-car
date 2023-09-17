@@ -5,11 +5,12 @@ import { Outlet } from 'react-router-dom';
 export const ToggleContext = createContext()
 const SharedLayout = () => {
   const [isFaforite, setIsFavorite] = useState([]);
+  const [page, setPage] = useState(2);
   return (
     <div>
       <Header />
       <main>
-      <ToggleContext.Provider value={{isFaforite, togleValueFn: ()=>{setIsFavorite(prev=>!prev)}}}>
+      <ToggleContext.Provider value={{isFaforite, togleValueFn: ()=>{setIsFavorite(prev=>!prev)}, page, addPage: ()=> {setPage(prev => prev + 1)}}}>
         <Outlet />
         </ToggleContext.Provider>
       </main>

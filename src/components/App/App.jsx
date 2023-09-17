@@ -1,6 +1,6 @@
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import CatalogPage from 'pages/Catalog';
-import FavoritesPage from 'pages/Favorites';
+import FavoritesPage from 'pages/Favorite/Favorites';
 import HomePage from 'pages/Home/Home';
 import { Route, Routes } from 'react-router-dom';
 

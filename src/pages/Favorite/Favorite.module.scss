@@ -1,0 +1,10 @@
+.favorite{
+    padding-top: 30px;
+    &__list {
+    display: flex;
+    column-gap: 29px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+}
