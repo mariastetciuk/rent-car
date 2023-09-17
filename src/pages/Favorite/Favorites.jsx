@@ -21,6 +21,7 @@ const FavoritesPage = () => {
             <CarCard cardCar={card} key={card.id} />
           ))}
         </ul>
+        {favorite.length === 0 && <p className={scss.plescholder}>Your favorite cars list is empty yet</p>}
       </Container>
     </section>
   );

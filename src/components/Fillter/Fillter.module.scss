@@ -1,35 +1,33 @@
 .form {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
   gap: 18px;
 }
-        
-  .btn {
-    display: inline-block;
-    margin-top: 22px;
-    padding: 14px 44px;
-    border-radius: 12px;
-background: #3470FF;
-border: none;
-border-radius: 12px;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-color: #fff;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-&:hover,
-&:focus {
-  background-color: #0B44CD;
-}
+.btn {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 14px 44px;
+  border-radius: 12px;
+  background: #3470ff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  color: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #0b44cd;
   }
+}
 
 .label {
-  color: #8A8A89;
- 
-
+  color: #8a8a89;
 }
 .input__wrapper {
   position: relative;
@@ -40,35 +38,30 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   position: relative;
   width: 150px;
-  background-color: #F7F7FB;
-padding: 14px 0 14px 62px;
-border: none;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px;
-margin-top: 8px;
-border-radius:  14px 0 0 14px;
-border-right: 1px solid rgba(138, 138, 137, 0.20);
-
-
-
+  background-color: #f7f7fb;
+  padding: 14px 0 14px 62px;
+  border: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 8px;
+  border-radius: 14px 0 0 14px;
+  border-right: 1px solid rgba(138, 138, 137, 0.2);
 }
 
 .input2 {
   display: block;
   width: 150px;
-  background-color: #F7F7FB;
+  background-color: #f7f7fb;
   padding: 14px 24px 14px 45px;
   font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px;
-border: none;
-margin-top: 8px;
-border-radius: 0 14px 14px 0;
-
-
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  margin-top: 8px;
+  border-radius: 0 14px 14px 0;
 }
 
 .span {
@@ -76,11 +69,11 @@ border-radius: 0 14px 14px 0;
   top: 145px;
   left: 596px;
   color: #121417;
-font-family: Manrope;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 20px;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .select {
@@ -90,7 +83,7 @@ line-height: 20px;
 .span__input1 {
   position: absolute;
   left: 18px;
- bottom: 17px;
+  bottom: 17px;
   display: block;
   color: #121417;
   font-family: Manrope;
@@ -103,7 +96,7 @@ line-height: 20px;
 .span__input2 {
   position: absolute;
   left: 170px;
- bottom: 17px;
+  bottom: 17px;
   display: block;
   color: #121417;
   font-family: Manrope;
