@@ -6,11 +6,12 @@ export const ToggleContext = createContext()
 const SharedLayout = () => {
   const [isFaforite, setIsFavorite] = useState([]);
   const [page, setPage] = useState(2);
+  const [isShowMore, setIsShowMore] = useState(true);
   return (
     <div>
       <Header />
       <main>
-      <ToggleContext.Provider value={{isFaforite, togleValueFn: ()=>{setIsFavorite(prev=>!prev)}, page, addPage: ()=> {setPage(prev => prev + 1)}}}>
+      <ToggleContext.Provider value={{isFaforite, togleValueFn: ()=>{setIsFavorite(prev=>!prev)}, page, addPage: ()=> {setPage(prev => prev + 1)}, isShowMore, toglleShowMore: ()=> {setIsShowMore(prev => !prev)}}}>
         <Outlet />
         </ToggleContext.Provider>
       </main>

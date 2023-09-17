@@ -8,7 +8,7 @@ import { ToggleContext } from "components/SharedLayout/SharedLayout";
 
 
 const Catalog = ()=> {
-  const { page, addPage } = useContext(ToggleContext);
+  const { page, addPage, toglleShowMore, isShowMore} = useContext(ToggleContext);
     const [gallary, setGallary] = useState([]);
     // const [page, setPage] = useState(1);
    
@@ -31,6 +31,8 @@ const Catalog = ()=> {
           try {
             const {data}  = await getGallery(page);
             setGallary(prev => [...prev, ...data])
+            console.log(isShowMore);
+            if(data.length >= 7) toglleShowMore();
           } catch (error) {
             console.log(error);
           }

@@ -1,93 +1,114 @@
 .form {
     display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 50px;
   gap: 18px;
+}
+        
+  .btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 14px 44px;
+    border-radius: 12px;
+background: #3470FF;
+border: none;
+border-radius: 12px;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+color: #fff;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    .select {
-        &__control {
-           width: 150px;
-          
-          }
-        
-        //   &__option--is--selected {
-        //     color: blue !important;
-        //     opacity: 0;
-        //   }
-        
-       
-        
-          &__single-value {
-            color: blue;
-           
-          }
-        
-        //   &__menu {
-        //     position: absolute;
-        //     right: 0;
-        //     top: 0;
-        //     max-width: 131px !important;
-        //     border-radius: 12px !important;
-        //     background: #161f37 !important;
-        //     padding: 10px !important;
-        //     margin-top: -6px !important;
-        //     gap: 0 !important;
-        //     z-index: 2222 !important;
-        //     @media screen and (min-width: 768px) {
-        //       padding: 14px !important;
-        //       width: 139px !important;
-        //     }
-        //     @media screen and (min-width: 1440px) {
-        //       width: 154px !important;
-        //     }
-        //   }
-        
-        //   &__indicator {
-        //     padding: 0 !important;
-        //     cursor: pointer !important;
-        //   }
-        
-        //   &__menu-list {
-        //     margin: 0 !important;
-        //     gap: 0 !important;
-        //     padding: 0 !important;
-        //     font-size: 12px !important;
-        //     line-height: calc(16 / 12) !important;
-        //     height: 200px !important;
-        //     @media screen and (min-width: 768px) {
-        //       font-size: 14px !important;
-        //       line-height: calc(18 / 12) !important;
-        //     }
-        //     @media screen and (min-width: 1440px) {
-        //     }
-        //   }
-        
-        //   &__option {
-        //     background-color: inherit !important;
-        //     font-size: 12px !important;
-        //     line-height: calc(16 / 14) !important;
-        //     color: rgba(243, 243, 243, 0.4) !important;
-        //   }
-        
-        //   &__indicator-separator {
-        //     background-color: inherit !important;
-        //   }
-        
-        //   &__option--is--focused {
-        //     outline: none !important;
-        //     border: none !important;
-        //   }
-        
-        //   &__input-container {
-        //     margin: 0 !important;
-        //     padding: 0 !important;
-        //     padding-left: 275px !important;
-        //     text-align: right !important;
-        //   }
-        
-        //   &__input {
-        //     color: blue !important;
-        //     opacity: 0.5 !important;
-        //   }
-    }
+&:hover,
+&:focus {
+  background-color: #0B44CD;
+}
+  }
+
+.label {
+  color: #8A8A89;
+ 
+
+}
+.input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input1 {
+  display: block;
+  position: relative;
+  width: 150px;
+  background-color: #F7F7FB;
+padding: 14px 0 14px 62px;
+border: none;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+margin-top: 8px;
+border-radius:  14px 0 0 14px;
+border-right: 1px solid rgba(138, 138, 137, 0.20);
+
+
+
+}
+
+.input2 {
+  display: block;
+  width: 150px;
+  background-color: #F7F7FB;
+  padding: 14px 24px 14px 45px;
+  font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+border: none;
+margin-top: 8px;
+border-radius: 0 14px 14px 0;
+
+
+}
+
+.span {
+  position: absolute;
+  top: 145px;
+  left: 596px;
+  color: #121417;
+font-family: Manrope;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px;
+}
+
+.select {
+  position: relative;
+}
+
+.span__input1 {
+  position: absolute;
+  left: 18px;
+ bottom: 17px;
+  display: block;
+  color: #121417;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.span__input2 {
+  position: absolute;
+  left: 170px;
+ bottom: 17px;
+  display: block;
+  color: #121417;
+  font-family: Manrope;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
