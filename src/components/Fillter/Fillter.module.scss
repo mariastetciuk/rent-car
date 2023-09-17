@@ -1,8 +1,93 @@
 .form {
     display: flex;
-    gap: 30px;
-}
+  justify-content: center;
+  margin-bottom: 50px;
+  gap: 18px;
 
-.input {
-    width: 50px;
+    .select {
+        &__control {
+           width: 150px;
+          
+          }
+        
+        //   &__option--is--selected {
+        //     color: blue !important;
+        //     opacity: 0;
+        //   }
+        
+       
+        
+          &__single-value {
+            color: blue;
+           
+          }
+        
+        //   &__menu {
+        //     position: absolute;
+        //     right: 0;
+        //     top: 0;
+        //     max-width: 131px !important;
+        //     border-radius: 12px !important;
+        //     background: #161f37 !important;
+        //     padding: 10px !important;
+        //     margin-top: -6px !important;
+        //     gap: 0 !important;
+        //     z-index: 2222 !important;
+        //     @media screen and (min-width: 768px) {
+        //       padding: 14px !important;
+        //       width: 139px !important;
+        //     }
+        //     @media screen and (min-width: 1440px) {
+        //       width: 154px !important;
+        //     }
+        //   }
+        
+        //   &__indicator {
+        //     padding: 0 !important;
+        //     cursor: pointer !important;
+        //   }
+        
+        //   &__menu-list {
+        //     margin: 0 !important;
+        //     gap: 0 !important;
+        //     padding: 0 !important;
+        //     font-size: 12px !important;
+        //     line-height: calc(16 / 12) !important;
+        //     height: 200px !important;
+        //     @media screen and (min-width: 768px) {
+        //       font-size: 14px !important;
+        //       line-height: calc(18 / 12) !important;
+        //     }
+        //     @media screen and (min-width: 1440px) {
+        //     }
+        //   }
+        
+        //   &__option {
+        //     background-color: inherit !important;
+        //     font-size: 12px !important;
+        //     line-height: calc(16 / 14) !important;
+        //     color: rgba(243, 243, 243, 0.4) !important;
+        //   }
+        
+        //   &__indicator-separator {
+        //     background-color: inherit !important;
+        //   }
+        
+        //   &__option--is--focused {
+        //     outline: none !important;
+        //     border: none !important;
+        //   }
+        
+        //   &__input-container {
+        //     margin: 0 !important;
+        //     padding: 0 !important;
+        //     padding-left: 275px !important;
+        //     text-align: right !important;
+        //   }
+        
+        //   &__input {
+        //     color: blue !important;
+        //     opacity: 0.5 !important;
+        //   }
+    }
 }
