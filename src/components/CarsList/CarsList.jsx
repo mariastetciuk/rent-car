@@ -1,11 +1,11 @@
 import CarCard from 'components/CarCard/CarCard';
 import scss from "./CarsList.module.scss";
-import { ToggleContext } from 'components/SharedLayout/SharedLayout';
-import { useContext } from 'react';
+// import { ToggleContext } from 'components/SharedLayout/SharedLayout';
+// import { useContext } from 'react';
 
 
 const CarsList = ({handleBtnLoadMore, gallary }) => {
-  const {isShowMore} = useContext(ToggleContext);
+  // const {isShowMore} = useContext(ToggleContext);
   
   return (
     <section>

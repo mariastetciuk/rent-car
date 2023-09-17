@@ -25,7 +25,7 @@ const optionPrices = [
 const getValue= (value, options) => value?options.find((option)=> option.value === value) : 'null';
 
 const Fillter = ({handleFillter, gallary}) => {
-  const {isShowMore, toglleShowMore} = useContext(ToggleContext);
+  const { toglleShowMore} = useContext(ToggleContext);
 
     const {
         register,
