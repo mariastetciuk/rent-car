@@ -11,7 +11,7 @@ const CarCard = ({cardCar}) => {
 
 
   const [isShowModal, setIsShowModal] = useState(false);
-  const [isFaforites, setIsFavorite] = useState(JSON.parse(localStorage.getItem('favorite')).some(item => item.id === id) || false);
+  const [isFaforites, setIsFavorite] = useState(localStorage.getItem('favorite') ? JSON.parse(localStorage.getItem('favorite')).some(item => item.id === id) : false);
   const {togleValueFn} = useContext(ToggleContext);
  
  const handleClickBtn = () => {
@@ -27,7 +27,7 @@ localStorage.setItem('favorite', JSON.stringify(toggleFavorite(isFaforites, card
   
   return <li className={scss.item} >
   <img className={scss.card__img} src={img} alt="Car" />
-  <button className={scss.card__btn} onClick={handleClickBtn} type="button"> {JSON.parse(localStorage.getItem('favorite')).some(item => item.id === id) ? <AiFillHeart size={'18'} color="#3470FF"/> : <CiHeart size={'18'} color="white"/>}</button>
+  <button className={scss.card__btn} onClick={handleClickBtn} type="button"> {isFaforites ? <AiFillHeart size={'18'} color="#3470FF"/> : <CiHeart size={'18'} color="white"/>}</button>
   <div className={scss.card__wrapper}>
     <p className={scss.card__description}>{make}  <span className={scss.card__model}>{model}</span>, {year}</p>
     <p>{rentalPrice}</p>

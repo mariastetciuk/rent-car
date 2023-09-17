@@ -1,6 +1,6 @@
 export function getFavorites() {
-    const favorites = JSON.parse(localStorage.getItem('favorite'));
-    return !favorites ? [] : favorites;
+    const favorites =localStorage.getItem('favorite') ? JSON.parse(localStorage.getItem('favorite')) : [];
+    return favorites;
   }
 
  export const toggleFavorite = (isFaforite, favorite)=>{
