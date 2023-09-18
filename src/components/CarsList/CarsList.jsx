@@ -8,7 +8,7 @@ const CarsList = ({ handleBtnLoadMore, gallary }) => {
         {gallary &&
           gallary.map(card => <CarCard cardCar={card} key={card.id} />)}
       </ul>
-      {gallary.length <= 31 && (
+      {gallary.length <= 31 && gallary.length > 7 && (
         <button
           type="button"
           className={scss.catalog__btn}

@@ -1,33 +1,44 @@
 import Select from 'react-select';
 import scss from './Fillter.module.scss';
 import { useForm, Controller } from 'react-hook-form';
-import { getGallerys } from 'API/fetch';
+import { getFilter } from 'API/fetch';
 import { optionPrices } from 'data/options';
 import { optionBrands, getValue } from 'utilities/oprions';
 
 const Fillter = ({ handleFillter }) => {
   const { register, handleSubmit, control } = useForm({
     mode: 'onChange',
-    defaultValues: { from: '', to: '' },
+    defaultValues: { from: null, to: null },
   });
   const onSubmitForm = data => {
     async function featch() {
       try {
-        const result = await getGallerys();
-        console.log('result all ', result.data);
-        const make = result.data
-          .filter(({ make }) => (make ? data.make === make : data.make))
-          .filter(({ rentalPrice }) => {
+        const result = await getFilter(data);
+
+        let filterGalery = result.data;
+        if (data.price) {
+          const filterPrice = filterGalery.filter(({ rentalPrice }) => {
             if (!data.price) {
               return rentalPrice;
             }
             data.price = `$${data.price}`;
             return rentalPrice === data.price;
-          })
-          .filter(({ mileage }) => mileage > data.from)
-          .filter(({ mileage }) => (mileage ? data.to < mileage : data.to));
-
-        handleFillter(make);
+          });
+          filterGalery = filterPrice;
+        }
+        if (data.from) {
+          const filterFrom = filterGalery.filter(
+            ({ mileage }) => mileage > data.from
+          );
+          filterGalery = filterFrom;
+        }
+        if (data.to) {
+          const fillterTo = filterGalery.filter(({ mileage }) =>
+            mileage ? data.to < mileage : data.to
+          );
+          filterGalery = fillterTo;
+        }
+        handleFillter(filterGalery);
       } catch (error) {
         console.log(error);
       }

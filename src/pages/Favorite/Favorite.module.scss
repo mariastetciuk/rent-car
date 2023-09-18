@@ -8,3 +8,22 @@
     margin-bottom: 100px;
 }
 }
+
+.wpapper {
+    margin-left: 350px;
+    position: relative;
+    width: 375px;
+    height: 330px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../img/k8.jpg);
+}
+
+.plescholder {
+   position: absolute;
+   top: -50px;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+}
