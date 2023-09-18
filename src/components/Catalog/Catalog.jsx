@@ -20,7 +20,6 @@ const Catalog = () => {
     }
     featch();
   }, []);
-  console.log(gallary);
   const handleFillter = fillter => setGallary(fillter);
   const handleBtnLoadMore = () => {
     addPage();
