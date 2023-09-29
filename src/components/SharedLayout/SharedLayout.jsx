@@ -1,3 +1,4 @@
+import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import { createContext, useState } from 'react';
 import { Outlet } from 'react-router-dom';
@@ -25,6 +26,7 @@ const SharedLayout = () => {
           <Outlet />
         </ToggleContext.Provider>
       </main>
+      <Footer />
     </div>
   );
 };

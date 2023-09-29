@@ -1,0 +1,49 @@
+.footer{
+    border-top: 2px solid antiquewhite;
+    padding: 50px 0 50px 0;
+  
+    background-color: rgb(29, 31, 58);
+}
+
+.footerContainer{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+}
+.link {
+    display: block;
+    padding: 0;
+   fill: antiquewhite;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+&:hover,
+&:focus {
+
+    fill: #3470FF;
+  
+}
+}
+
+
+
+.text {
+    font-size: 18px;
+    font-weight: 600;
+    color: antiquewhite;
+}
+
+.name {
+    color: #3470FF;
+}
+
+.icon {
+
+   fill: inherit;
+  
+  
+   
+}
