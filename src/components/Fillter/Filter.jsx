@@ -8,21 +8,22 @@ import { optionBrands, getValue } from 'utilities/oprions';
 const Fillter = ({ handleFillter }) => {
   const { register, handleSubmit, control } = useForm({
     mode: 'onChange',
-    defaultValues: { from: null, to: null },
+    defaultValues: { from: null, to: null, price: null },
   });
   const onSubmitForm = data => {
+
     async function featch() {
+    
       try {
         const result = await getFilter(data);
-
         let filterGalery = result.data;
         if (data.price) {
           const filterPrice = filterGalery.filter(({ rentalPrice }) => {
             if (!data.price) {
               return rentalPrice;
             }
-            data.price = `$${data.price}`;
-            return rentalPrice === data.price;
+            let price = `$${data.price}`;
+            return rentalPrice === price;
           });
           filterGalery = filterPrice;
         }
@@ -34,7 +35,7 @@ const Fillter = ({ handleFillter }) => {
         }
         if (data.to) {
           const fillterTo = filterGalery.filter(({ mileage }) =>
-            mileage ? data.to < mileage : data.to
+            mileage ? data.to > mileage : data.to
           );
           filterGalery = fillterTo;
         }
@@ -116,3 +117,38 @@ const Fillter = ({ handleFillter }) => {
 };
 
 export default Fillter;
+// try {
+//   const result = await getFilter(data);
+//   console.log(data);
+
+
+//   let filterGalery = result.data;
+//   if (data.price) {
+//     const filterPrice = filterGalery.filter(({ rentalPrice }) => {
+//       if (!data.price) {
+//         return rentalPrice;
+//       }
+//       let price = `$${data.price}`;
+//       return rentalPrice === price;
+//     });
+//     filterGalery = filterPrice;
+//   }
+
+
+//   if (data.from) {
+//     const filterFrom = filterGalery.filter(
+//       ({ mileage }) => mileage > data.from
+//     );
+//     filterGalery = filterFrom;
+//   }
+//   if (data.to) {
+//     const fillterTo = filterGalery.filter(({ mileage }) =>
+//       mileage ? data.to > mileage : data.to
+//     );
+//     filterGalery = fillterTo;
+//   }
+//   handleFillter(filterGalery);
+// } catch (error) {
+//   console.log(error);
+// }
+// }
