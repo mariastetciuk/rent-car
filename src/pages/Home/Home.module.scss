@@ -20,7 +20,7 @@
 &__title{
     color: antiquewhite;
    font-size: 28px;
-   margin-bottom: 140px;
+   margin-bottom: 160px;
 
     @media screen and (min-width: 768px) {
         font-size: 40px;
@@ -54,33 +54,19 @@
     padding: 10px 0px;
     background-color: rgb(29, 31, 58);
     border: 1px solid rgb(146, 148, 248);
-    margin-left: 180px;
+   margin-left: auto;
     color: aliceblue;
     font-size: 25px;
     font-weight: 500px;
     border-radius: 20px;
     overflow: hidden;
 
-    @media screen and (min-width: 430px) {
-margin-left: 230px;
-    }
-
-    @media screen and (min-width: 550px) {
-        margin-left: 300px;
-            }
-
-    
     @media screen and (min-width: 768px) {
         width: 250px;
         font-size: 32px;
-        margin-left: 450px;
         padding: 10px 20px;
-
     }
 
-    @media screen and (min-width: 1280px) {
-       margin-left: 870px;
-    }
     &:hover {
         box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
       }
