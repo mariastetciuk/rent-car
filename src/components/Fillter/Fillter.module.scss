@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
   gap: 18px;
 }
@@ -28,6 +29,8 @@
 
 .label {
   color: #8a8a89;
+  position: relative;
+
 }
 .input__wrapper {
   position: relative;
@@ -52,6 +55,7 @@
 
 .input2 {
   display: block;
+  position: relative;
   width: 150px;
   background-color: #f7f7fb;
   padding: 14px 24px 14px 45px;
@@ -66,14 +70,18 @@
 
 .span {
   position: absolute;
-  top: 145px;
-  left: 596px;
-  color: #121417;
+  top: 40px;
+  left: 30px;
+  color: #1b1c1d;
   font-family: Manrope;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+
+  @media screen and (min-width: 480px) {
+    
+}
 }
 
 .select {
@@ -85,7 +93,7 @@
   left: 18px;
   bottom: 17px;
   display: block;
-  color: #121417;
+  color: #1b1c1d;
   font-family: Manrope;
   font-size: 18px;
   font-style: normal;
@@ -98,7 +106,7 @@
   left: 170px;
   bottom: 17px;
   display: block;
-  color: #121417;
+  color: #1b1c1d;
   font-family: Manrope;
   font-size: 18px;
   font-style: normal;

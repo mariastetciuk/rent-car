@@ -6,6 +6,7 @@ import { AiFillCar } from 'react-icons/ai';
 const Header = () => {
   return (
     <header className={scss.header}>
+      <div className={scss.container__header}>
       <Link to="/" className={scss.logo}>
         <AiFillCar size="25px" color="#3470FF" />
         <p className={scss.logo__title}>
@@ -29,6 +30,7 @@ const Header = () => {
           </NavLink>
         </li>
       </ul>
+    </div>
     </header>
   );
 };

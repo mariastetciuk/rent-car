@@ -82,7 +82,7 @@ const Fillter = ({ handleFillter }) => {
                   classNamePrefix="filter-select"
                   placeholder=""
                 />
-                <span className={scss.span}>To $</span>
+                <span className={scss.span}>$</span>
               </label>
             )}
           />
@@ -117,38 +117,3 @@ const Fillter = ({ handleFillter }) => {
 };
 
 export default Fillter;
-// try {
-//   const result = await getFilter(data);
-//   console.log(data);
-
-
-//   let filterGalery = result.data;
-//   if (data.price) {
-//     const filterPrice = filterGalery.filter(({ rentalPrice }) => {
-//       if (!data.price) {
-//         return rentalPrice;
-//       }
-//       let price = `$${data.price}`;
-//       return rentalPrice === price;
-//     });
-//     filterGalery = filterPrice;
-//   }
-
-
-//   if (data.from) {
-//     const filterFrom = filterGalery.filter(
-//       ({ mileage }) => mileage > data.from
-//     );
-//     filterGalery = filterFrom;
-//   }
-//   if (data.to) {
-//     const fillterTo = filterGalery.filter(({ mileage }) =>
-//       mileage ? data.to > mileage : data.to
-//     );
-//     filterGalery = fillterTo;
-//   }
-//   handleFillter(filterGalery);
-// } catch (error) {
-//   console.log(error);
-// }
-// }

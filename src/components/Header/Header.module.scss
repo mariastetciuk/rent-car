@@ -1,49 +1,77 @@
 .header {
-   
-    padding: 20px 155px;
-    margin: 0 auto;
+  background-color: rgb(29, 31, 58);
+}
 
-background-color: rgb(29, 31, 58);
+.container__header {
+  padding: 20px 30px;
+  margin: 0 auto;
+  color: antiquewhite;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-    display: flex;
-    align-items: center;
-    gap: 250px;
-    color: antiquewhite;
-    z-index: 1;
-    
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    justify-content: flex-start;
+    gap: 200px;
+  }
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 30px;
 
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 
-
-&__title {
+  &__title {
     font-size: 23px;
     font-weight: 600;
-}
+    color: antiquewhite;
 
-&__titleBlue {
-    color: #3470FF;
-}
+    @media screen and (min-width: 1280px) {
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+
+  &__titleBlue {
+    color: #3470ff;
+  }
 }
 
 .list {
-    display: flex;
-    gap: 30px;
-    
+  display: flex;
+  gap: 30px;
 }
 
-.item{
-    color: antiquewhite;
-    font-size: 30px;
-    font-weight: 800;
-    padding: 20px 5px;
+.item {
+  color: antiquewhite;
+  font-size: 30px;
+  font-weight: 800;
+  padding: 20px 5px;
 
-    &:hover,
-    &:focus {
-        color: #3470FF;
-    }
+  &:hover,
+  &:focus {
+    color: #3470ff;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 24;
+    font-weight: 700;
+  }
 }

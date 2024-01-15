@@ -1,6 +1,6 @@
 .hero {
     max-width: 1600px;
-    height: 600px;
+    height: 400px;
     margin: 0 auto;
     padding-top: 50px;
     background-repeat: no-repeat;
@@ -8,31 +8,73 @@
     background-size: cover;
    
     background-image: url('../../img/hero_03.jpg');
+
+    @media screen and (min-width: 768px) {
+        height: 500px;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
+
 &__title{
     color: antiquewhite;
-    font-size: 40px;
-    margin-bottom: 300px;
-}
+   font-size: 28px;
+   margin-bottom: 170px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 40px;
+        margin-bottom: 250px;
+      }
+
+      @media screen and (min-width: 1280px) {
+        font-size: 50px;
+        margin-bottom: 200px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 250px;
+    }
+    }
 
 &__titleSpan {
     display: block;
-    padding-left: 250px;
+    padding-left: 170px;
+
+    @media screen and (min-width: 768px) {
+        padding-left: 300px;
+    }
+    @media screen and (min-width: 1280px) {
+        padding-left: 380px;
+    }
 }
 
 &__btn {
     position: relative;
     display: block;
     text-align: center;
-    width: 250px;
+    width: 200px;
     padding: 10px 20px;
     background-color: rgb(29, 31, 58);
     border: 1px solid rgb(146, 148, 248);
-    margin-left: 950px;
+    margin-left: 250px;
     color: aliceblue;
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 500px;
     border-radius: 20px;
     overflow: hidden;
+
+    
+    @media screen and (min-width: 768px) {
+        width: 250px;
+        font-size: 32px;
+        margin-left: 450px;
+
+    }
+
+    @media screen and (min-width: 1280px) {
+       margin-left: 870px;
+    }
     &:hover {
         box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
       }
@@ -77,17 +119,27 @@
     
 &__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    // justify-content: space-between;
     gap: 30px;
+    @media screen and (min-width: 768px) {
+       justify-content: center;
+       gap: 50px;
+       font-size: 25px;
+     }
+   
+
 }
 
 &__item {
-    flex-basis: calc((100% - 30px * (3 - 1)) / 3);}
+    @media screen and (min-width: 768px) {
+        width: 320px;
+     }
+   }
 
 &__icon {
    
     color: white;
-    margin-bottom: 20px;
     text-align: center;
     
    
